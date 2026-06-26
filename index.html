@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambasiva Rao | AI/ML Engineer & Full-Stack Architect</title>
+    <meta name="description" content="Advanced interactive cybernetic portfolio of Gandikota Sambasiva Rao - AI/ML Engineer and Full-Stack Developer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Background Canvas for Interactive Cyber-Grid Network -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom Particle Cursor Trail Canvas -->
+    <canvas id="cursor-canvas"></canvas>
+
+    <!-- Background Sound Toggle (Futuristic Ambient Theme) -->
+    <div id="audio-control" class="audio-control-btn" title="Toggle System Audio">
+        <div class="audio-icon">🔇</div>
+        <span class="audio-tooltip">Toggle System Soundscape</span>
+    </div>
+
+    <!-- FUTURISTIC SYSTEM BOOT SCREEN (Intro Portal) -->
+    <section id="summoning-screen" class="active">
+        <div class="boot-sequence-container">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">system_initialization_console.sh</span>
+            </div>
+            <div class="boot-console">
+                <div class="boot-log-line">>> INITIALIZING NEURAL FRAMEWORK FOR G. SAMBASIVA RAO...</div>
+                <div id="boot-log" class="boot-log-content">
+                    <p class="log-info">[OK] Core modules loaded: Python, Java, C, JavaScript</p>
+                    <p class="log-info">[OK] Neural Engine: TensorFlow, Scikit-Learn, NLP, Generative AI</p>
+                    <p class="log-info">[OK] Deployed clusters: Microsoft Azure, Google Cloud Platform</p>
+                    <p class="log-info">[OK] Telemetry nodes online: Guntur, India (522002)</p>
+                </div>
+            </div>
+            
+            <div class="boot-progress-wrapper">
+                <div class="progress-label">CORE INTERFACE COMPILING: <span id="boot-progress-val">0%</span></div>
+                <div class="progress-bar-container">
+                    <div id="boot-progress-bar" class="progress-bar-fill"></div>
+                </div>
+            </div>
+            
+            <button id="summon-btn" class="launch-trigger-btn hidden" disabled>
+                <span>LAUNCH INTERFACE</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN PORTFOLIO CYBER-DASHBOARD -->
+    <main id="dashboard-screen" class="hidden">
+        <!-- HEADER / CORE STATUS BAR -->
+        <header class="dashboard-header">
+            <div class="header-logo-container">
+                <span class="glowing-sigil">⎈</span>
+                <div>
+                    <h2 class="header-title">SAMBASIVA RAO</h2>
+                    <span class="header-status">AI/ML ENGINEER &bull; FULL-STACK DEVELOPER &bull; ONLINE</span>
+                </div>
+            </div>
+            <div class="social-links-magical">
+                <a href="mailto:sambasiva.connect@gmail.com" class="social-runic-link" title="Send Email">✉ Email</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-runic-link" title="LinkedIn Profile">❖ LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="social-runic-link" title="GitHub Repositories">⚒ GitHub</a>
+            </div>
+        </header>
+
+        <!-- DASHBOARD GRID LAYOUT -->
+        <div class="dashboard-grid">
+            
+            <!-- LEFT PANEL: PROFILE ORB & NAVIGATION INVENTORY -->
+            <aside class="sidebar-panel card-runic">
+                <div class="avatar-crystal-container">
+                    <div class="crystal-frame">
+                        <!-- Loaded generated professional tech avatar -->
+                        <img id="avatar-image" class="avatar-cutout" src="assets/professional_tech_avatar.png" alt="Gandikota Sambasiva Rao - AI Engineer Portrait">
+                        <div class="avatar-glow-pulse"></div>
+                    </div>
+                    <div class="avatar-info">
+                        <h3 class="name-glowing">G. Sambasiva Rao</h3>
+                        <p class="role-desc">B.Tech CSE (AI & ML) &bull; GPA: 8.39 / 10</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <nav class="runic-navigation">
+                    <button class="nav-rune-btn active" data-tab="runes-power">
+                        <span class="rune-icon">🖥️</span>
+                        <div class="nav-rune-label">
+                            <span class="rune-title">Core Engine</span>
+                            <span class="rune-desc">Technical Skills Matrix</span>
+                        </div>
+                    </button>
+                    <button class="nav-rune-btn" data-tab="tome-quests">
+                        <span class="rune-icon">📈</span>
+                        <div class="nav-rune-label">
+                            <span class="rune-title">Operations Dossier</span>
+                            <span class="rune-desc">Professional Experience</span>
+                        </div>
+                    </button>
+                    <button class="nav-rune-btn" data-tab="vault-artifacts">
+                        <span class="rune-icon">⚙️</span>
+                        <div class="nav-rune-label">
+                            <span class="rune-title">Project Constructs</span>
+                            <span class="rune-desc">Completed Systems</span>
+                        </div>
+                    </button>
+                    <button class="nav-rune-btn" data-tab="tower-knowledge">
+                        <span class="rune-icon">🎓</span>
+                        <div class="nav-rune-label">
+                            <span class="rune-title">Knowledge Matrix</span>
+                            <span class="rune-desc">Academic History</span>
+                        </div>
+                    </button>
+                    <button class="nav-rune-btn" data-tab="scrying-pool">
+                        <span class="rune-icon">📊</span>
+                        <div class="nav-rune-label">
+                            <span class="rune-title">Visual Analytics Matrix</span>
+                            <span class="rune-desc">Media, Leadership & Certs</span>
+                        </div>
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- RIGHT PANEL: CONTENT VISUALIZER VIEWPORTS -->
+            <section class="main-display-panel card-runic">
+                
+                <!-- TAB 1: CORE ENGINE (TECHNICAL SKILLS) -->
+                <div id="tab-runes-power" class="tab-content-pane active">
+                    <div class="pane-header">
+                        <h3 class="pane-title">🖥️ CORE ENGINE CONFIGURATION</h3>
+                        <p class="pane-subtitle">Neural mapping of programming, ML modeling, DevOps, and full-stack pipelines.</p>
+                    </div>
+
+                    <!-- Skills Interface Grid -->
+                    <div class="skills-interface-grid">
+                        <div class="skills-canvas-container card-inner-runic">
+                            <h4 class="inner-title">Neural Node Grid Constellation</h4>
+                            <canvas id="neural-net-canvas"></canvas>
+                            <p class="canvas-hint">Select nodes to route signals and inspect detailed metrics</p>
+                        </div>
+                        
+                        <div class="skills-detail-container">
+                            <!-- Skill details card -->
+                            <div id="skill-detail-card" class="skill-detail-card card-inner-runic">
+                                <h4 id="selected-skill-title" class="skill-detail-title">Select a Node</h4>
+                                <div id="selected-skill-content" class="skill-detail-body">
+                                    <p>Route signals in the Neural Grid on the left to inspect Sambasiva's proficiencies in languages, AI/ML, databases, cloud DevOps, and responsive frontends.</p>
+                                </div>
+                            </div>
+
+                            <!-- SYSTEM OPTIMIZATION SANDBOX -->
+                            <div class="alchemy-workbench-container card-inner-runic">
+                                <h4 class="inner-title">⚡ System Optimization Sandbox</h4>
+                                <p class="section-desc">Combine system modules to verify application syntheses.</p>
+                                <div class="alchemy-elements">
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="python">🐍 Python</div>
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="java">☕ Java</div>
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="web">🕸️ Web Dev</div>
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="ml">🧠 AI/ML</div>
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="db">💾 Database</div>
+                                    <div class="alchemy-node draggable-rune" draggable="true" data-rune="iot">🔌 IoT</div>
+                                </div>
+                                <div id="alchemy-cauldron" class="alchemy-cauldron">
+                                    <div class="cauldron-inner">
+                                        <span>DRAG ENGINE NODES HERE TO SYNTHESIZE</span>
+                                    </div>
+                                    <div class="cauldron-bubbles"></div>
+                                </div>
+                                <div id="alchemy-result" class="alchemy-result-display hidden"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: OPERATIONS DOSSIER (EXPERIENCE) -->
+                <div id="tab-tome-quests" class="tab-content-pane">
+                    <div class="pane-header">
+                        <h3 class="pane-title">📈 OPERATIONS DOSSIER</h3>
+                        <p class="pane-subtitle">Chronological ledger of internships, cloud deployments, and engineered products.</p>
+                    </div>
+
+                    <!-- Quests Navigation -->
+                    <div class="quest-navigation-tabs">
+                        <button class="quest-tab-btn active" data-quest="quest-azure">
+                            <span class="quest-icon">⚡</span>
+                            <span>Azure & ML Operations</span>
+                        </button>
+                        <button class="quest-tab-btn" data-quest="quest-genai">
+                            <span class="quest-icon">🤖</span>
+                            <span>Generative AI Engine</span>
+                        </button>
+                        <button class="quest-tab-btn" data-quest="quest-security">
+                            <span class="quest-icon">🛡️</span>
+                            <span>Cyber Security System</span>
+                        </button>
+                    </div>
+
+                    <div class="quest-details-panel">
+                        
+                        <!-- QUEST 1: AZURE / ML -->
+                        <div id="quest-azure" class="quest-pane active">
+                            <div class="quest-meta-grid">
+                                <div>
+                                    <h4 class="quest-role">AI & Azure Intern</h4>
+                                    <span class="quest-alliance">Organization: Edunet Foundation × AICTE</span>
+                                </div>
+                                <span class="quest-duration">May 2025 – Jun 2025</span>
+                            </div>
+                            
+                            <div class="quest-visualization-layout">
+                                <div class="quest-visualizer card-inner-runic">
+                                    <h5 class="visualizer-header">Health Analytics Predictive Model</h5>
+                                    <p class="viz-desc">Tune telemetry inputs to simulate predictive regression models in Azure ML.</p>
+                                    
+                                    <div class="fitness-viz-controls">
+                                        <div class="slider-group">
+                                            <label>Activity Duration (Minutes): <span id="intensity-val">60</span></label>
+                                            <input type="range" id="intensity-slider" min="0" max="180" value="60">
+                                        </div>
+                                        <div class="slider-group">
+                                            <label>Caloric Expenditure Target (kcal): <span id="calories-val">500</span></label>
+                                            <input type="range" id="calories-slider" min="100" max="1500" value="500">
+                                        </div>
+                                    </div>
+                                    <div class="chart-wrapper">
+                                        <canvas id="fitness-chart"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="quest-achievements-list">
+                                    <h5 class="runic-heading">Execution Logs</h5>
+                                    <ul class="magical-bullet-list">
+                                        <li><strong>Health Telemetry Pipeline:</strong> Engineered web system featuring activity logs, fitness metrics calculations, and progress trackers.</li>
+                                        <li><strong>Predictive Regression:</strong> Deployed machine learning analytics to process user habits and output tailored insights.</li>
+                                        <li><strong>Azure AI Services:</strong> Integrated Cognitive Services, Azure ML Studio workspaces, and cloud deployment servers.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QUEST 2: GENERATIVE AI -->
+                        <div id="quest-genai" class="quest-pane">
+                            <div class="quest-meta-grid">
+                                <div>
+                                    <h4 class="quest-role">Generative AI Intern</h4>
+                                    <span class="quest-alliance">Organization: Blackbucks</span>
+                                </div>
+                                <span class="quest-duration">May 2025 – Jul 2025</span>
+                            </div>
+
+                            <div class="quest-visualization-layout">
+                                <div class="quest-visualizer card-inner-runic">
+                                    <h5 class="visualizer-header">LLM Prompt Orchestrator Console</h5>
+                                    <p class="viz-desc">Configure system prompts, triggers, and Chain-of-Thought (CoT) validators.</p>
+                                    
+                                    <div class="prompt-builder">
+                                        <div class="prompt-row">
+                                            <label>Model System Role:</label>
+                                            <select id="prompt-role">
+                                                <option value="code-wizard">Code Parser (Syntax-strict, structured)</option>
+                                                <option value="creative-bard">Analyst Agent (Descriptive, evaluative)</option>
+                                            </select>
+                                        </div>
+                                        <div class="prompt-row">
+                                            <label>Chain-of-Thought (CoT):</label>
+                                            <input type="checkbox" id="prompt-cot" checked>
+                                        </div>
+                                        <button id="cast-prompt-btn" class="magical-trigger-action-btn">EXECUTE PROMPT PIPELINE</button>
+                                    </div>
+                                    
+                                    <div class="console-output-window">
+                                        <div class="console-header">System Output Logger</div>
+                                        <div id="console-logs" class="console-logs">
+                                            <p class="terminal-msg">&gt;&gt; Ready to execute orchestration script...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quest-achievements-list">
+                                    <h5 class="runic-heading">Execution Logs</h5>
+                                    <ul class="magical-bullet-list">
+                                        <li><strong>Prompt Architect:</strong> Designed 50+ structures to evaluate and optimize LLM outputs for tasks automation.</li>
+                                        <li><strong>API Integrations:</strong> Built scripting pipelines chaining ChatGPT API requests for document parsing.</li>
+                                        <li><strong>Validation Layers:</strong> Programmed validation shields to verify structured schema formatting.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- QUEST 3: CYBER SECURITY -->
+                        <div id="quest-security" class="quest-pane">
+                            <div class="quest-meta-grid">
+                                <div>
+                                    <h4 class="quest-role">Cyber Security Intern</h4>
+                                    <span class="quest-alliance">Organization: Edunet Foundation × AICTE</span>
+                                </div>
+                                <span class="quest-duration">May 2025 – Jun 2025</span>
+                            </div>
+
+                            <div class="quest-visualization-layout">
+                                <div class="quest-visualizer card-inner-runic">
+                                    <h5 class="visualizer-header">Threat Mitigation Aegis Grid</h5>
+                                    <p class="viz-desc">Intercept incoming exploit packets (red) using the Aegis Firewall (gold). Move shield with cursor.</p>
+                                    
+                                    <div class="game-container">
+                                        <canvas id="firewall-canvas"></canvas>
+                                        <div id="firewall-overlay" class="game-overlay">
+                                            <button id="start-firewall-btn" class="magical-trigger-action-btn">INITIALIZE FIREWALL</button>
+                                        </div>
+                                        <div class="game-stats">
+                                            <span>Mitigated Intrusions: <span id="packets-score">0</span></span>
+                                            <span>Security Integrity: <span id="health-score">100%</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="quest-achievements-list">
+                                    <h5 class="runic-heading">Execution Logs</h5>
+                                    <ul class="magical-bullet-list">
+                                        <li><strong>Perimeter Auditing:</strong> Audited network packet streams, encryption handshakes, and vulnerabilities.</li>
+                                        <li><strong>Security Dossiers:</strong> Investigated symmetric cryptography, authentication keys, and network threats.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TAB 3: PROJECT CONSTRUCTS (PROJECTS) -->
+                <div id="tab-vault-artifacts" class="tab-content-pane">
+                    <div class="pane-header">
+                        <h3 class="pane-title">⚙️ SYSTEM CONSTRUCTS</h3>
+                        <p class="pane-subtitle">Completed engineering products and modular source code pipelines.</p>
+                    </div>
+
+                    <div class="artifacts-layout">
+                        <!-- Artifact 1: Aura Stick -->
+                        <div class="artifact-card card-inner-runic">
+                            <div class="artifact-header">
+                                <h4 class="artifact-title">Aura Stick &bull; Ultrasonic Assistive Device</h4>
+                                <span class="artifact-rarity">Hardware IoT Node</span>
+                            </div>
+                            <p class="artifact-desc">An Arduino-based smart navigation device for visually impaired users utilizing real-time ultrasonic distance calculations.</p>
+                            
+                            <!-- Telemetry Sim -->
+                            <div class="sonar-sim-container">
+                                <h5>Ultrasonic Echo Distance Scope</h5>
+                                <p class="viz-desc">Move the object closer to the sensors to test wave reflections and piezo alerts.</p>
+                                <div class="sonar-visual-area">
+                                    <div id="sonar-stick" class="sonar-stick">📏</div>
+                                    <div id="sonar-wave-field" class="sonar-wave-field"></div>
+                                    <div id="sonar-obstacle" class="sonar-obstacle" title="Drag Me">📦</div>
+                                </div>
+                                <div class="sonar-telemetry">
+                                    <span>Telemetry Range: <span id="sonar-dist-val">80cm</span></span>
+                                    <span>Piezo Output Frequency: <span id="sonar-freq-val">Inactive</span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="artifact-specs">
+                                <strong>Hardware:</strong> Arduino UNO, HC-SR04 Ultrasonic Sensor, Piezo Buzzer &bull; <strong>Software:</strong> C, Arduino IDE.
+                            </div>
+                        </div>
+
+                        <!-- Artifact 2: Jeevan Kaushal Club Website -->
+                        <div class="artifact-card card-inner-runic">
+                            <div class="artifact-header">
+                                <h4 class="artifact-title">Jeevan Kaushal Club Portal</h4>
+                                <span class="artifact-rarity">Full-Stack Framework</span>
+                            </div>
+                            <p class="artifact-desc">Responsive community club portal with event registration, auth dashboards, and student database managers.</p>
+                            
+                            <!-- Flow Diagram -->
+                            <div class="spring-flow-container">
+                                <h5>Spring Boot MVC Database Routing</h5>
+                                <p class="viz-desc">Trigger requests to watch query streams flow to MongoDB.</p>
+                                
+                                <div class="flow-trigger-buttons">
+                                    <button class="flow-btn" data-action="register">POST /api/register</button>
+                                    <button class="flow-btn" data-action="login">POST /api/auth</button>
+                                    <button class="flow-btn" data-action="create-event">POST /api/event</button>
+                                </div>
+
+                                <div class="flow-diagram-canvas-wrapper">
+                                    <canvas id="spring-flow-canvas"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="artifact-specs">
+                                <strong>Backend:</strong> Java, Spring Boot, Spring Security &bull; <strong>Database:</strong> MongoDB &bull; <strong>Frontend:</strong> HTML5, CSS3, ES6+ Javascript.
+                            </div>
+                        </div>
+
+                        <!-- Artifact 3: English Learning Platform -->
+                        <div class="artifact-card card-inner-runic">
+                            <div class="artifact-header">
+                                <h4 class="artifact-title">Interactive English Lexicon</h4>
+                                <span class="artifact-rarity">Web Application</span>
+                            </div>
+                            <p class="artifact-desc">Browser-based language workspace containing modular practice panels and LocalStorage telemetry tracking.</p>
+                            
+                            <!-- NLP Matcher -->
+                            <div class="lexicon-game-container">
+                                <h5>Grammar Element Synthesizer</h5>
+                                <p class="viz-desc">Drag the appropriate grammar elements into the placeholder slots.</p>
+                                
+                                <div class="sentence-box">
+                                    "The AI model <span id="slot-verb" class="sentence-slot" data-expected="compiled">_______</span> the data, then <span id="slot-adverb" class="sentence-slot" data-expected="safely">_______</span> stored it."
+                                </div>
+                                <div class="lexicon-runes">
+                                    <div class="lexicon-rune draggable-word" draggable="true" data-word="compiled">compiled</div>
+                                    <div class="lexicon-rune draggable-word" draggable="true" data-word="safely">safely</div>
+                                    <div class="lexicon-rune draggable-word" draggable="true" data-word="run">run</div>
+                                    <div class="lexicon-rune draggable-word" draggable="true" data-word="loudly">loudly</div>
+                                </div>
+                                <div id="lexicon-success-msg" class="lexicon-success hidden">✨ Lexicon Synthesized! System Online.</div>
+                            </div>
+
+                            <div class="artifact-specs">
+                                <strong>Core System:</strong> Vanilla JavaScript (ES6+), LocalStorage API, Responsive CSS Flexbox/Grid.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: KNOWLEDGE MATRIX (EDUCATION) -->
+                <div id="tab-tower-knowledge" class="tab-content-pane">
+                    <div class="pane-header">
+                        <h3 class="pane-title">🎓 KNOWLEDGE MATRIX</h3>
+                        <p class="pane-subtitle">Academic registers and quantitative metrics.</p>
+                    </div>
+
+                    <div class="tower-interface-layout">
+                        <!-- Left: Floor selector graphic -->
+                        <div class="tower-graphic-container card-inner-runic">
+                            <div class="tower-floors">
+                                <div class="tower-floor active" data-floor="3">
+                                    <span class="floor-num">L3</span>
+                                    <span class="floor-label">B.Tech CSE (AI & ML)</span>
+                                </div>
+                                <div class="tower-floor" data-floor="2">
+                                    <span class="floor-num">L2</span>
+                                    <span class="floor-label">Intermediate (MPC)</span>
+                                </div>
+                                <div class="tower-floor" data-floor="1">
+                                    <span class="floor-num">L1</span>
+                                    <span class="floor-label">Secondary (SSC)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Selected Floor Details -->
+                        <div class="tower-details-container card-inner-runic">
+                            <div id="floor-3-pane" class="floor-detail-pane active">
+                                <h4 class="floor-title">Level 3: B.Tech CSE (AI & ML)</h4>
+                                <div class="education-grid">
+                                    <div class="stat-orb">
+                                        <svg class="radial-progress-svg" viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" class="radial-bg"></circle>
+                                            <circle cx="50" cy="50" r="40" class="radial-bar" style="stroke-dashoffset: calc(251.2 - (251.2 * 83.9) / 100);"></circle>
+                                        </svg>
+                                        <div class="stat-number">8.39</div>
+                                        <div class="stat-label">CGPA</div>
+                                    </div>
+                                    <div class="education-meta">
+                                        <p class="inst-name">KKR & KSR Institute of Technology and Sciences, Guntur</p>
+                                        <p class="duration">Expected April 2027</p>
+                                        <div class="subjects-learned">
+                                            <span class="subject-badge">Machine Learning</span>
+                                            <span class="subject-badge">Generative AI</span>
+                                            <span class="subject-badge">DBMS</span>
+                                            <span class="subject-badge">Java Spring Boot</span>
+                                            <span class="subject-badge">Data Structures</span>
+                                            <span class="subject-badge">NLP</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="floor-2-pane" class="floor-detail-pane">
+                                <h4 class="floor-title">Level 2: Intermediate &bull; MPC</h4>
+                                <div class="education-grid">
+                                    <div class="stat-orb">
+                                        <svg class="radial-progress-svg" viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" class="radial-bg"></circle>
+                                            <circle cx="50" cy="50" r="40" class="radial-bar" style="stroke-dashoffset: calc(251.2 - (251.2 * 93.5) / 100);"></circle>
+                                        </svg>
+                                        <div class="stat-number">93.5%</div>
+                                        <div class="stat-label">Marks</div>
+                                    </div>
+                                    <div class="education-meta">
+                                        <p class="inst-name">Sri Chaitanya College, Guntur</p>
+                                        <p class="duration">Completed March 2023</p>
+                                        <p class="inst-details">Rigorous focus in Mathematics, Physics, and Chemistry (MPC).</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="floor-1-pane" class="floor-detail-pane">
+                                <h4 class="floor-title">Level 1: Secondary Education (10th)</h4>
+                                <div class="education-grid">
+                                    <div class="stat-orb">
+                                        <svg class="radial-progress-svg" viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="40" class="radial-bg"></circle>
+                                            <circle cx="50" cy="50" r="40" class="radial-bar" style="stroke-dashoffset: calc(251.2 - (251.2 * 99.1) / 100);"></circle>
+                                        </svg>
+                                        <div class="stat-number">99.1%</div>
+                                        <div class="stat-label">Marks</div>
+                                    </div>
+                                    <div class="education-meta">
+                                        <p class="inst-name">The Children's School, Guntur</p>
+                                        <p class="duration">Completed June 2021</p>
+                                        <p class="inst-details">Scored 595 / 600. Strong academic basis across scientific and linguistic courses.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: VISUAL ANALYTICS MATRIX (MEDIA & CREDENTIALS) -->
+                <div id="tab-scrying-pool" class="tab-content-pane">
+                    <div class="pane-header">
+                        <h3 class="pane-title">📊 VISUAL ANALYTICS MATRIX</h3>
+                        <p class="pane-subtitle">Interacting visual projections of FrameVerse media work, certifications, and timeline registries.</p>
+                    </div>
+
+                    <div class="scrying-pool-grid">
+                        
+                        <!-- Interactive Holographic Radar Map -->
+                        <div class="scrying-pool-canvas-container card-inner-runic">
+                            <h4 class="inner-title">Holographic Projection Matrix (FrameVerse Media Club)</h4>
+                            <p class="viz-desc">Stir cursor to trigger wave projections of media works and generated art.</p>
+                            <div class="scrying-canvas-wrapper">
+                                <canvas id="scrying-pool-canvas"></canvas>
+                                <div id="pool-projection-label" class="pool-label">Hover to Project FrameVerse Details</div>
+                            </div>
+                        </div>
+
+                        <!-- Video timeline scrubber -->
+                        <div class="scrying-sidebar-skills card-inner-runic">
+                            <h4 class="inner-title">🎞️ Video Scrubbing Editor Simulator</h4>
+                            <p class="viz-desc">Slide playhead to scrub frame vectors and edit metrics.</p>
+                            
+                            <div class="video-scrubber-widget">
+                                <div class="timeline-monitor">
+                                    <div id="timeline-canvas-frame" class="timeline-canvas-frame">
+                                        <canvas id="timeline-canvas"></canvas>
+                                    </div>
+                                </div>
+                                <div class="scrubber-controls">
+                                    <input type="range" id="video-scrub-slider" min="0" max="100" value="0">
+                                    <div class="scrub-meta">
+                                        <span>Frame: <span id="scrub-frame-val">0 / 100</span></span>
+                                        <span>Editor: <span id="scrub-editor-val">CapCut/Filmora</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="feats-detail">
+                                <h5 class="runic-heading">System Credentials & Leadership</h5>
+                                <ul class="magical-bullet-list">
+                                    <li><strong>FrameVerse Co-founder:</strong> Supervised 5-member digital team overseeing recording, video edits, and Instagram analytics (@frameverse_kits).</li>
+                                    <li><strong>MAD Guild:</strong> Instructed elementary educational modules to underprivileged children.</li>
+                                    <li><strong>NPTEL & Google Seals:</strong> Earned certifications in DBMS (12-Week NPTEL) and Google Cloud Foundations (Coursera).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- FOOTER / STATS -->
+        <footer class="dashboard-footer">
+            <div class="footer-stat"><strong>CPU:</strong> 12-Core | <strong>RAM:</strong> 32GB | <strong>LATENCY:</strong> 14ms | <strong>Network:</strong> Connected</div>
+            <div class="footer-copyright">&copy; 2026 G. Sambasiva Rao &bull; Engineered with Pure JavaScript & WebGL Canvas</div>
+        </footer>
+    </main>
+
+    <!-- Core Logic -->
+    <script src="index.js"></script>
+</body>
+</html>
